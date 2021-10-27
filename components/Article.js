@@ -29,6 +29,10 @@ import articleData from './articleData';
   Refresh the page to see the new article.
 */
 
+//create selector for div.articles
+
+const artDiv = document.querySelector('.articles');
+
 function articleMaker({title,date,firstParagraph,secondParagraph,thirdParagraph}){
 
 //first, we need to make our selectors
@@ -43,13 +47,14 @@ const firstParaCont = document.createElement('p');
 const secondParaCont = document.createElement('p');
 const thirdParaCont = document.createElement('p');
 
-const expandBtnClass = document.createElement('span');
+const expandBtnClass = document.createElement('button');
 
 //next, append the needful so our data will look like the below
+// artDiv.appendChild(expandBtnClass);
 
 articleClass.classList.add('article','article-open');
 articleClass.appendChild(titleCont);
-articleClass.appendChild(expandBtnClass);
+
 
 dateCont.classList.add('date');
 articleClass.appendChild(dateCont);
@@ -63,13 +68,15 @@ articleClass.appendChild(thirdParaCont);
 //add text content to the above needfuls
 //title, date, 3 paras
 
+expandBtnClass.textContent = '+';
+
 titleCont.textContent = title;
 dateCont.textContent = date;
 firstParaCont.textContent = firstParagraph;
 secondParaCont.textContent = secondParagraph;
 thirdParaCont.textContent = thirdParagraph;
 
-expandBtnClass.textContent = '+';
+
 
 //our returned dom node should look like this::
 //<div class="article">
@@ -84,9 +91,9 @@ expandBtnClass.textContent = '+';
 //step 2:: add an event listener to the expand button span
 //on a click, toggle 'article-open' on article
 
-// expandBtnClass.onclick = function(){
-//   articleClass.classList.toggle('article-open');
-// }
+expandBtnClass.onclick = function(){
+  articleClass.classList.toggle('article-open');
+}
 
 //deprecated; as currently implemented, the button itself disappeared. Now we can click on the title itself and it will cause the article to expand/contract
 
@@ -102,9 +109,7 @@ return articleClass;
 // Step 4: Outside your function now, loop over the data. At each iteration you'll use your component
 // to create a div.article element and append it to the DOM inside div.articles (see index.html).
 
-//create selector for div.articles
 
-const artDiv = document.querySelector('.articles');
 
 const articleElements = articleData.map(data=>{
   return articleMaker(data);
