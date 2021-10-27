@@ -83,6 +83,13 @@ const articleData = [
       thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
             Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
             Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+    },
+    {
+        title: 'Informatics of the Hvelian Nightrain Function',
+        date: '116 harvest 11 ka 1682',
+        firstParagraph: 'Kval lestchat, tarachslaik. We are here writing the first paragraph!',
+        secondParagraph: 'This is our own second paragraph!',
+        thirdParagraph: 'And here is our THIRD PARAGRAPH!!!'
     }
   ];
 

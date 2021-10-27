@@ -49,6 +49,7 @@ const expandBtnClass = document.createElement('span');
 
 articleClass.classList.add('article','article-open');
 articleClass.appendChild(titleCont);
+articleClass.appendChild(expandBtnClass);
 
 dateCont.classList.add('date');
 articleClass.appendChild(dateCont);
@@ -57,7 +58,7 @@ articleClass.appendChild(firstParaCont);
 articleClass.appendChild(secondParaCont);
 articleClass.appendChild(thirdParaCont);
 
-articleClass.appendChild(expandBtnClass);
+
 
 //add text content to the above needfuls
 //title, date, 3 paras
@@ -83,7 +84,13 @@ expandBtnClass.textContent = '+';
 //step 2:: add an event listener to the expand button span
 //on a click, toggle 'article-open' on article
 
-expandBtnClass.onclick = function(){
+// expandBtnClass.onclick = function(){
+//   articleClass.classList.toggle('article-open');
+// }
+
+//deprecated; as currently implemented, the button itself disappeared. Now we can click on the title itself and it will cause the article to expand/contract
+
+titleCont.onclick = function(){
   articleClass.classList.toggle('article-open');
 }
 
