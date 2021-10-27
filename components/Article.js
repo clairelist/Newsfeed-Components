@@ -55,9 +55,9 @@ articleClass.appendChild(dateCont);
 
 articleClass.appendChild(firstParaCont);
 articleClass.appendChild(secondParaCont);
-articleClassList.appendChild(thirdParaCont);
+articleClass.appendChild(thirdParaCont);
 
-articleClassList.appendChild(expandBtnClass);
+articleClass.appendChild(expandBtnClass);
 
 //add text content to the above needfuls
 //title, date, 3 paras
@@ -97,7 +97,7 @@ return articleClass;
 
 //create selector for div.articles
 
-artDiv = document.querySelector('.articles');
+const artDiv = document.querySelector('.articles');
 
 const articleElements = articleData.map(data=>{
   return articleMaker(data);
