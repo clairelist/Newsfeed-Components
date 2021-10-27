@@ -114,3 +114,50 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+function articleMaker({article}){
+
+//first, we need to make our selectors
+
+
+const articleClass = document.createElement('div');
+
+const title = document.createElement('h2');
+const date = document.createElement('p');
+
+const firstParagraph = document.createElement('p');
+const secondParagraph = document.createElement('p');
+const thirdParagraph = document.createElement('p');
+
+const expandBtnClass = document.createElement('span');
+
+//next, append the needful so our data will look like the below
+
+articleClass.classList.add('article','article-open');
+articleClass.appendChild(title);
+
+date.classList.add('date');
+articleClass.appendChild(date);
+
+articleClass.appendChild(firstParagraph);
+articleClass.appendChild(secondParagraph);
+articleClassList.appendChild(thirdParagraph);
+
+articleClassList.appendChild(expandBtnClass);
+
+
+
+//our returned dom node should look like this::
+//<div class="article">
+//<h2>{title of the article}</h2>
+//<p class="date">{date of the article}</p>
+
+////{three separate paragraph elements}
+
+//<span class="expandButton">+</span>
+//</div>
+
+//step 2:: add an event listener to the expand button span
+//on a click, toggle 'article-open' on article
+
+}
