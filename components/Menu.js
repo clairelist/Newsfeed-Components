@@ -8,7 +8,7 @@ let menuItems = [
   'Music',
   'Log Out'
 ];
-
+//CODE . CODE . CODE .
 /* 
   Step 1: Write a component called 'menuMaker' to create a menu like the markup below:
 
