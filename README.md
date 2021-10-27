@@ -1,5 +1,7 @@
 # Newsfeed-Components
 
+THIS IS THE UPDATE TO README THAT I MADE TO PUSH TO MY REPO
+
 In this project we are going to be building a news feed reader. The goal is to have a collapsing menu, and expandable news articles. The styles and some of the HTML is already done for you.
 
 ## Need to know
